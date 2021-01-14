@@ -44,11 +44,7 @@ generate_json:
 
 .PHONY: test
 test: build
-	rm ./out/output.html || true
-	rm ./out/output2.html || true
-	.${BINARY} -name "KVM Linux" -repo "github.com/kubernetes/minikube/" -pr "6096" -in "testdata/minikube-logs.json" -out "./out/output.html" -details "0c07e808219403a7241ee5a0fc6a85a897594339"
-	.${BINARY} -name "KVM Linux" -repo "github.com/kubernetes/minikube/" -pr "6096" -in "testdata/Docker_Linux.json" -out "./out/output2.html" -details "0c07e808219403a7241ee5a0fc6a85a897594339"
-
+	BINARY=${BINARY} ./test.sh
 
 .PHONY: cross
 cross: out/gopogh-linux-amd64 out/gopogh-darwin-amd64 out/gopogh.exe out/gopogh-linux-arm64 out/gopogh-linux-arm

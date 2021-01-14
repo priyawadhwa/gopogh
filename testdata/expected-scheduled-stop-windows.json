@@ -1,0 +1,9 @@
+{
+    "NumberOfTests": 1,
+    "NumberOfFail": 0,
+    "NumberOfPass": 1,
+    "NumberOfSkip": 0,
+    "FailedTests": null,
+    "PassedTests": [
+        "TestScheduledStopWindows"
+    ],

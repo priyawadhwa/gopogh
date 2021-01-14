@@ -1,0 +1,44 @@
+{"Time":"2021-01-12T22:33:05.5581262Z","Action":"output","Output":"?=== RUN   TestScheduledStopWindows\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:124: (dbg) Run:  ./minikube-windows-amd64.exe start -p scheduled-stop-20210112223103-14028 --memory=1900 --driver=docker\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:124: (dbg) Done: ./minikube-windows-amd64.exe start -p scheduled-stop-20210112223103-14028 --memory=1900 --driver=docker: (1m43.59599s)\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:133: (dbg) Run:  ./minikube-windows-amd64.exe stop -p scheduled-stop-20210112223103-14028 --schedule 5m\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:133: (dbg) Done: ./minikube-windows-amd64.exe stop -p scheduled-stop-20210112223103-14028 --schedule 5m: (1.0094241s)\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:187: (dbg) Run:  ./minikube-windows-amd64.exe status --format={{.TimeToStop}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:187: (dbg) Done: ./minikube-windows-amd64.exe status --format={{.TimeToStop}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028: (1.0416793s)\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:57: (dbg) Run:  ./minikube-windows-amd64.exe ssh -p scheduled-stop-20210112223103-14028 -- sudo systemctl show minikube-scheduled-stop --no-page\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:133: (dbg) Run:  ./minikube-windows-amd64.exe stop -p scheduled-stop-20210112223103-14028 --schedule 5s\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:172: (dbg) Run:  ./minikube-windows-amd64.exe status --format={{.Host}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:172: (dbg) Non-zero exit: ./minikube-windows-amd64.exe status --format={{.Host}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028: exit status 3 (3.5232091s)\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        -- stdout --\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        \tError\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        -- /stdout --\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        ** stderr ** \r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        \tE0112 22:32:59.642786    8588 status.go:363] failed to get storage capacity of /var: NewSession: new client: new client: dial tcp 127.0.0.1:33167: connectex: No connection could be made because the target machine actively refused it.\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        \tE0112 22:32:59.644806    8588 status.go:235] status error: NewSession: new client: new client: dial tcp 127.0.0.1:33167: connectex: No connection could be made because the target machine actively refused it.\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"        ** /stderr **\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:172: status error: exit status 3 (may be ok)\r\n"}
+{"Time":"2021-01-12T22:33:05.6121601Z","Action":"output","Output":"    scheduled_stop_test.go:172: (dbg) Run:  ./minikube-windows-amd64.exe status --format={{.Host}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    scheduled_stop_test.go:172: (dbg) Non-zero exit: ./minikube-windows-amd64.exe status --format={{.Host}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028: exit status 7 (420.2802ms)\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        -- stdout --\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        \tStopped\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        -- /stdout --\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    scheduled_stop_test.go:172: status error: exit status 7 (may be ok)\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    scheduled_stop_test.go:172: (dbg) Run:  ./minikube-windows-amd64.exe status --format={{.TimeToStop}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    scheduled_stop_test.go:172: (dbg) Non-zero exit: ./minikube-windows-amd64.exe status --format={{.TimeToStop}} -p scheduled-stop-20210112223103-14028 -n scheduled-stop-20210112223103-14028: exit status 7 (387.0412ms)\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        -- stdout --\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        \tNonexistent\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        \r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"        -- /stdout --\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    scheduled_stop_test.go:172: status error: exit status 7 (may be ok)\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    helpers_test.go:171: Cleaning up \"scheduled-stop-20210112223103-14028\" profile ...\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    helpers_test.go:172: (dbg) Run:  ./minikube-windows-amd64.exe delete -p scheduled-stop-20210112223103-14028\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Output":"    helpers_test.go:172: (dbg) Done: ./minikube-windows-amd64.exe delete -p scheduled-stop-20210112223103-14028: (3.4373944s)\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Test":"TestScheduledStopWindows","Output":"--- PASS: TestScheduledStopWindows (121.44s)\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Test":"TestScheduledStopWindows","Output":"PASS\r\n"}
+{"Time":"2021-01-12T22:33:05.6131428Z","Action":"output","Test":"TestScheduledStopWindows","Output":"Tests completed in 2m1.4388647s (result code 0)\r\n"}

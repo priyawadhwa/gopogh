@@ -3,6 +3,7 @@ package report
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"html/template"
 	"time"
 
@@ -97,6 +98,7 @@ func Generate(report models.ReportDetail, groups []models.TestGroup) (DisplayCon
 		g.Duration = g.Events[len(g.Events)-1].Elapsed
 		if !g.Hidden {
 			g.TestOrder = order
+			fmt.Println("got status:", g.Status)
 			if g.Status == pass {
 				passedTests = append(passedTests, g)
 			}
@@ -106,7 +108,6 @@ func Generate(report models.ReportDetail, groups []models.TestGroup) (DisplayCon
 			if g.Status == skip {
 				skippedTests = append(skippedTests, g)
 			}
-
 		}
 	}
 

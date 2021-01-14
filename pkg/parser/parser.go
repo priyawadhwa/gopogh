@@ -60,7 +60,9 @@ func ProcessEvents(evs []models.TestEvent) []models.TestGroup {
 			})
 			gm[e.Test] = index
 		}
-		e.Output = strings.Trim(e.Output, " ")
+		e.Output = strings.TrimSpace(e.Output)
+		e.Test = strings.TrimSpace(e.Test)
+
 		groups[index].Events = append(groups[index].Events, e)
 		groups[index].Status = e.Action
 	}
